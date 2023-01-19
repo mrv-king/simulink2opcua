@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.02" LastModified="2013-03-06T05:36:44.0862658Z" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">"
+    <UAObject NodeId="i=30001" BrowseName="SIMULINK model">
+        <Description>Generated OPC UA Information Model</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
+        </References>
+    </UAObject>
+
+    <UAObject NodeId="i=30002" BrowseName="Vs=120V rms60 Hz">
+        <DisplayName>Vs=120V rms60 Hz</DisplayName>
+        <Description>SourceType: AC Voltage Source</Description>
+        <Description>SID: 14</Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30001</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAObject NodeId="i=30003" BrowseName="Variables">
+        <Description>Vs=120V rms60 Hz variables </Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30002</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAVariable NodeId="i=30004" BrowseName="Amplitude" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30003</Reference>
+        </References>
+        <Value>
+            <String>120*sqrt(2)</String>
+        </Value>
+    </UAVariable>
+    
+    <UAVariable NodeId="i=30005" BrowseName="Phase" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30003</Reference>
+        </References>
+        <Value>
+            <String>0</String>
+        </Value>
+    </UAVariable>
+    
+    <UAVariable NodeId="i=30006" BrowseName="Frequency" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30003</Reference>
+        </References>
+        <Value>
+            <String>60</String>
+        </Value>
+    </UAVariable>
+    
+    <UAObject NodeId="i=30007" BrowseName="Ideal Switch">
+        <DisplayName>Ideal Switch</DisplayName>
+        <Description>SourceType: Ideal Switch</Description>
+        <Description>SID: 6</Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30001</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAObject NodeId="i=30008" BrowseName="Properties">
+        <Description>Ideal Switch properties </Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30007</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAVariable NodeId="i=30009" BrowseName="Ron" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30008</Reference>
+        </References>
+        <Value>
+            <String>1e-3</String>
+        </Value>
+    </UAVariable>
+    
+    <UAVariable NodeId="i=30010" BrowseName="Lon" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30008</Reference>
+        </References>
+        <Value>
+            <String>1e-9</String>
+        </Value>
+    </UAVariable>
+    
+    <UAVariable NodeId="i=30011" BrowseName="Rs" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30008</Reference>
+        </References>
+        <Value>
+            <String>Inf</String>
+        </Value>
+    </UAVariable>
+    
+    <UAObject NodeId="i=30012" BrowseName="Variables">
+        <Description>Ideal Switch variables </Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30007</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAVariable NodeId="i=30013" BrowseName="control" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30012</Reference>
+        </References>
+        <Value>
+            <String>signal1</String>
+        </Value>
+    </UAVariable>
+    
+    <UAObject NodeId="i=30014" BrowseName="Ind. voltage">
+        <DisplayName>Ind. voltage</DisplayName>
+        <Description>SourceType: Voltage Measurement</Description>
+        <Description>SID: 7</Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30001</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAObject NodeId="i=30015" BrowseName="Properties">
+        <Description>Ind. voltage properties </Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30014</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAVariable NodeId="i=30016" BrowseName="OutputType" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30015</Reference>
+        </References>
+        <Value>
+            <String>Magnitude</String>
+        </Value>
+    </UAVariable>
+    
+    <UAObject NodeId="i=30017" BrowseName="Variables">
+        <Description>Ind. voltage variables </Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30014</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAVariable NodeId="i=30018" BrowseName="SignalName" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30017</Reference>
+        </References>
+        <Value>
+            <String>U_L (V)</String>
+        </Value>
+    </UAVariable>
+    
+    <UAObject NodeId="i=30019" BrowseName="  Ind. current">
+        <DisplayName>  Ind. current</DisplayName>
+        <Description>SourceType: Current Measurement</Description>
+        <Description>SID: 1</Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30001</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAObject NodeId="i=30020" BrowseName="Properties">
+        <Description>  Ind. current properties </Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30019</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAVariable NodeId="i=30021" BrowseName="OutputType" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30020</Reference>
+        </References>
+        <Value>
+            <String>Magnitude</String>
+        </Value>
+    </UAVariable>
+    
+    <UAObject NodeId="i=30022" BrowseName="Variables">
+        <Description>  Ind. current variables </Description>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30019</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+        </References>
+    </UAObject>
+    
+    <UAVariable NodeId="i=30023" BrowseName="SignalName" DataType="String" AccessLevel="3" UserAccessLevel="1">
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=62</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=30022</Reference>
+        </References>
+        <Value>
+            <String>I_L (A)</String>
+        </Value>
+    </UAVariable>
+    
+    </UANodeSet>
